@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import {mystore, mypersistor} from './ejdaha_movies/redux/Store'
 
+
 const NewApp = () =>{
     return(
         <Provider store = {mystore}>

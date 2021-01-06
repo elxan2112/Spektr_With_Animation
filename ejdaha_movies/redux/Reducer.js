@@ -3,6 +3,7 @@ const searchName = {data: []}
 export function reducerForSearch (state = searchName, action){
     switch(action.type){
         case 'searchAction':
+            console.log('action payload')
             console.log(action.payloadData)
             return {data: action.payloadData}
             

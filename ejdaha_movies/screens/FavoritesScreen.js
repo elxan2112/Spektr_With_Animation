@@ -17,7 +17,6 @@ class FavoritesScreen extends Component{
                 <Text style={styles.clearBtnText}>Clear all</Text>
             </TouchableOpacity>
                 <ScrollView>
-                    
                     {this.props.favoritData.map((all, index) =>(
                         <View key={index} style={styles.contentContainer}>
                             <Image style={styles.contentImages}

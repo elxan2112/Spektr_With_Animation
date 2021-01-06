@@ -1,17 +1,7 @@
-export const changeName = (dispatch, url) =>{
-    let data = []
-    return async() =>{
-        try{
-            const response = await fetch(url)
-            data = await response.json()
-            dispatch(searching(data))
-          }
-          catch (e){
-            console.log('Change name Action error: ' + e)
-            console.log(url)
-          }
-    }
-}
+export const loadData = (name) => ({
+    type: 'Load_Data',
+    payload: name
+})
 
 export const searching = (data) =>({
     type: 'searchAction',
