@@ -7,7 +7,7 @@ import App from './App';
 import {name as appName} from './app.json';
 import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
-import {mystore, mypersistor} from './ejdaha_movies/redux/Store'
+import {mystore, mypersistor} from './redux/Store'
 
 
 const NewApp = () =>{

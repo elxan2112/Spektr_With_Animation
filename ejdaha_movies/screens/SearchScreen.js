@@ -12,9 +12,7 @@ class SearchScreen extends Component{
     return(
         <View style={styles.container}>
             <SearchHeader/>
-            <ScrollView>
-                <SearchMainView/>
-            </ScrollView>
+            <SearchMainView/>
         </View>
     )
     }

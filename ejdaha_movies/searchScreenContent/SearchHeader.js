@@ -1,18 +1,13 @@
 import React, {Component} from 'react'
 import {View, Text, TextInput, TouchableOpacity} from 'react-native'
 import {connect} from 'react-redux'
-import { changeName, cleanSearch, loadData} from '../redux/Action'
+import { cleanSearch, loadData} from '../../redux/Action'
 import {styles} from '../myStyles/searchScreenStyles/SearchHeaderStyles'
 
 class SearchHeader extends Component {
     constructor(props){
         super(props)
     }
-
-    url = "http://api.tvmaze.com/search/shows?q="
-    urlChanged = ""
-
-    urlName = 'batman'
 
     render(){
         return(
@@ -37,7 +32,6 @@ class SearchHeader extends Component {
 function mapDispatchToProps(dispatch){
     return{
         loadData: (name)=> dispatch(loadData(name)),
-        search: (name) => dispatch(changeName(dispatch, name)),
         clean: () => dispatch(cleanSearch())
     }
 }

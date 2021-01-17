@@ -3,8 +3,8 @@ const searchName = {data: []}
 export function reducerForSearch (state = searchName, action){
     switch(action.type){
         case 'searchAction':
-            console.log('action payload')
-            console.log(action.payloadData)
+            // console.log('action payload')
+            // console.log(action.payloadData)
             return {data: action.payloadData}
             
         case 'cleanSearchAction':
@@ -14,7 +14,7 @@ export function reducerForSearch (state = searchName, action){
     }
 }
 
-const firstStateFavorites = {favoritData: [{}]}
+const firstStateFavorites = {favoritData: []}
 
 export function reducerForFavorites (state = firstStateFavorites, action){
     switch(action.type){

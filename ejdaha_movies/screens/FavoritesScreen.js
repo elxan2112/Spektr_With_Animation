@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {ScrollView, Text, View, Image, TouchableOpacity} from 'react-native'
-import {cleanFavorites, deleteFromFavorites} from '../redux/Action'
+import {cleanFavorites, deleteFromFavorites} from '../../redux/Action'
 import {styles} from '../myStyles/favoriteScreenStyles/FavoritesStyles'
 
 class FavoritesScreen extends Component{
