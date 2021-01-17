@@ -1,0 +1,1 @@
+# Spektr_With_Animation
