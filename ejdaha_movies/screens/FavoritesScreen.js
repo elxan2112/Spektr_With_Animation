@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {ScrollView, Text, View, Image, TouchableOpacity} from 'react-native'
 import {cleanFavorites, deleteFromFavorites} from '../../redux/Action'
 import {styles} from '../myStyles/favoriteScreenStyles/FavoritesStyles'
+import strings from '../../localization/index'
 
 class FavoritesScreen extends Component{
     constructor(props){
@@ -14,7 +15,7 @@ class FavoritesScreen extends Component{
             <TouchableOpacity
             style={styles.clearBtn}
             onPress={()=>this.props.clear()}>
-                <Text style={styles.clearBtnText}>Clear all</Text>
+                <Text style={styles.clearBtnText}>{strings.entertainmentScreen.movieFinder.favorites.clearBtn}</Text>
             </TouchableOpacity>
                 <ScrollView>
                     {this.props.favoritData.map((all, index) =>(
@@ -23,7 +24,7 @@ class FavoritesScreen extends Component{
                             source={{uri: all?.show?.image?.medium ?? 'https://cs9.pikabu.ru/post_img/big/2016/09/14/9/1473865516186911796.jpg'}}/>
                             <Text style={styles.contentText}>{all.show.name}</Text>
                             <TouchableOpacity onPress={()=>this.props.delete(index)}>
-                                <Text style={styles.contentBtnText}>Delete from favorite</Text>
+                                <Text style={styles.contentBtnText}>{strings.entertainmentScreen.movieFinder.favorites.deleteBtn}</Text>
                             </TouchableOpacity>
                         </View>
                     ))}

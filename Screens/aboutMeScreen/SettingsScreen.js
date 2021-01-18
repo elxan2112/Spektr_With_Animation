@@ -1,17 +1,13 @@
 import React from "react";
 import { View, Text } from "react-native";
 import {styles} from '../../MyStyles/SettingsScreenStyles'
+import strings from '../../localization/index'
 
 export const SettingsScreen = () => {
     return(
         <View style = {styles.container}>
-            <Text style = {styles.textStyle}>
-                Burada sizin reklamınız ola bilərdi!
-                Ətraflı məlumat üçün ADRA - nə müraciyən edə bilərsiz!
-            </Text>
-            <Text style = {styles.advText}>
-            Или по братски закинь 10 манат на этот номер (077-575-07-65)
-            </Text>
+            <Text style = {styles.textStyle}>{strings.aboutMeScreen.settingsScreen.mainInfo}</Text>
+            <Text style = {styles.advText}>{strings.aboutMeScreen.settingsScreen.otherInfo}</Text>
         </View>
     )
 }

@@ -3,6 +3,7 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native'
 import {connect} from 'react-redux'
 import { cleanSearch, loadData} from '../../redux/Action'
 import {styles} from '../myStyles/searchScreenStyles/SearchHeaderStyles'
+import strings from '../../localization/index'
 
 class SearchHeader extends Component {
     constructor(props){
@@ -12,16 +13,16 @@ class SearchHeader extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.logoText}>Best Movies!</Text>
+                <Text style={styles.logoText}>{strings.entertainmentScreen.movieFinder.searchHeader.logoText}</Text>
                 <TextInput 
                 style={styles.inputText}
                 onChangeText = {(text)=> this.urlName = text}
-                placeholder='input name of movie'/>
+                placeholder={strings.entertainmentScreen.movieFinder.searchHeader.inputText}/>
                 <TouchableOpacity onPress={()=>this.props.loadData(this.urlName)} style ={styles.actionBtns}>
-                    <Text style={styles.actionBtnsText}>Search</Text>
+                    <Text style={styles.actionBtnsText}>{strings.entertainmentScreen.movieFinder.searchHeader.searchBtn}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>this.props.clean()} style ={styles.actionBtns}>
-                    <Text style={styles.actionBtnsText}>Clean search list</Text>
+                    <Text style={styles.actionBtnsText}>{strings.entertainmentScreen.movieFinder.searchHeader.cleanSearchBtn}</Text>
                 </TouchableOpacity>
             </View>
         )

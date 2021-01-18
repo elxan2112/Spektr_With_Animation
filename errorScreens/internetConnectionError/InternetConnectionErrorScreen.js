@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Text, View } from 'react-native'
 import {styles} from './Styles'
+import strings from '../../localization/index'
 
 class InternetConnectionErrorScreen extends Component{
     constructor(props){
@@ -9,8 +10,8 @@ class InternetConnectionErrorScreen extends Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.errorText}>404 Not Found!</Text>
-                <Text style={styles.errorText}>Please check your internet connection and try again.</Text>
+                <Text style={styles.errorText}>{strings.errorScreen.errorCode}</Text>
+                <Text style={styles.errorText}>{strings.errorScreen.errorText}</Text>
             </View>
         )
     }

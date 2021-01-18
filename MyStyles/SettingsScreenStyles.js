@@ -7,10 +7,12 @@ export const styles = StyleSheet.create({
     },
     textStyle:{
         fontSize: 30,
-        color: '#800000'
+        color: '#800000',
+        textAlign: 'center'
     },
     advText:{
         fontSize: 20,
-        color: '#67bf8c'
+        color: '#67bf8c',
+        textAlign: 'center'
     }
 })

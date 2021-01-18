@@ -20,18 +20,18 @@ const styles = StyleSheet.create({
     },
     mainText:{
         fontSize: 30,
-        marginTop: 30.
+        marginTop: 30,
+        textAlign: 'center'
     },
     mainInfoText:{
         flex: 0.9,
         justifyContent:'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     infoText:{
         fontSize: 35,
-        justifyContent: 'center',
-        alignItems: 'center',
         color: '#53805a',
+        textAlign: 'center'
     },
   });
 

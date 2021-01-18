@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {styles} from './Styles'
-import {Animated,StyleSheet, View, Easing, ImageBackground} from 'react-native'
-import{newsPaper1, newsPaper2} from '../../images'
+import {Animated, View, Easing, ImageBackground} from 'react-native'
+import{ newsPaper2} from '../../images'
 import {connect} from 'react-redux'
 import {changeNewsBlank} from '../../../redux/Action'
 

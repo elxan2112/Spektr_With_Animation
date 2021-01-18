@@ -6,7 +6,7 @@ import MainScreen from './splashScreens/splashScreenHome/SplashScreenHome';
 import {blank} from './redux/Action'
 import {AppState} from 'react-native';
 import Toast from 'react-native-simple-toast';
-
+import strings from './localization/index'
 
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
       nextAppState === 'active'
     ) {
       console.log('App has come to the foreground!');
-      Toast.show('Welcome Back!', Toast.LONG)
+      Toast.show(strings.toastText, Toast.LONG)
     }
     this.setState({appState: nextAppState});
   };

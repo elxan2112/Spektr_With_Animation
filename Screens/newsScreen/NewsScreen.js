@@ -4,6 +4,7 @@ import NetInfo from "@react-native-community/netinfo";
 import {WebView} from 'react-native-webview'
 import Spinner from 'react-native-loading-spinner-overlay';
 import InternetConnectionErrorScreen from "../../errorScreens/internetConnectionError/InternetConnectionErrorScreen";
+import strings from '../../localization/index'
 
 class NewsScreen extends Component{
     constructor(props){
@@ -41,7 +42,7 @@ class NewsScreen extends Component{
             <SafeAreaView style = {{flex: 1}}>
                 <Spinner
                 visible={this.state.visible}
-                textContent={'Loading...'}
+                textContent={strings.newsScreen.spinnerText}
                 textStyle={{ color: '#FFF', fontSize: 30}}
                 />
                 <WebView
